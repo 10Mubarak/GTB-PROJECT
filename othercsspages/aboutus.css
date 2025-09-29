@@ -1,0 +1,988 @@
+/*
+|--------------------------------------------------------------------------
+| 1. GLOBAL RESET & BASE STYLES
+|--------------------------------------------------------------------------
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none !important;
+}
+
+body {
+  font-family: acumin-pro, sans-serif;
+}
+
+/* Base button style for primary actions */
+.btn-primary {
+  background-color: #e6500d;
+  color: white;
+  padding: 14px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(230, 80, 13, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #cf4e0c;
+}
+
+/* Base button style for full-width blocks (like in media section) */
+.btn-prime {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e6500d;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(230, 80, 13, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.btn-prime:hover {
+  background-color: #cf4e0c;
+}
+
+/* Horizontal Rule/Divider */
+hr {
+  width: 75%;
+  margin: 40px auto;
+  border: none;
+  border-top: 1px solid #A2A5A8;
+  height: 0.05px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 2. LAYOUT & CONTAINERS
+| (Used for setting max-width and centering content)
+|--------------------------------------------------------------------------
+*/
+
+.notice-container,
+.nav-container,
+.secondary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Standard content width for sections below the header */
+.guaranty-section h2,
+.guaranty-cont,
+.solutions-heading,
+.solutions-cards,
+.media-cont,
+.btn-prime-container,
+.small-img-cont,
+.contact-numbers,
+.footer {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 3. NOTICE BANNER
+|--------------------------------------------------------------------------
+*/
+
+.notice-banner {
+  background-color: #f5f3f0;
+  padding: 16px 24px;
+}
+
+.notice-title {
+  color: #d97706;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.notice-text {
+  color: #6b7280;
+  line-height: 28px;
+  font-size: 1.2em;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 4. PRIMARY NAVIGATION
+|--------------------------------------------------------------------------
+*/
+
+.primary-nav {
+  background-color: #DD4F05;
+  padding: 12px 0;
+}
+
+.nav-container {
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d97706;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* GTCO Logo (Part of Primary Nav) */
+.gtco-logo {
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gtco-title {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.gtco-subtitle {
+  color: white;
+  font-size: 10px;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+.gtco-country {
+  opacity: 0.8;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-item:hover {
+  color: #fed7aa;
+}
+
+.dropdown-arrow {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-icon,
+.lock-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  cursor: pointer;
+}
+
+.search-icon:hover,
+.lock-icon:hover {
+  fill: #fed7aa;
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-link:hover {
+  color: #fed7aa;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 5. SECONDARY NAVIGATION & DROPDOWN
+|--------------------------------------------------------------------------
+*/
+
+.secondary-nav {
+  background-color: #fafafa;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+}
+
+.secondary-container {
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondary-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.home-icon {
+  width: 20px;
+  height: 20px;
+  fill: #6b7280;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.home-link:hover .home-icon {
+  fill: #DD4F05;
+}
+
+.secondary-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Secondary Nav Items (including base for dropdowns) */
+.secondary-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s, border-color 0.3s;
+  /* Reset link styles within */
+}
+
+.secondary-item a {
+  color: #374151;
+}
+
+.secondary-item:hover,
+.secondary-item.active {
+  color: #d97706;
+  border-bottom: 3px solid #d97706;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 320px;
+  padding: 10px 0;
+  z-index: 1000;
+  margin-top: 3px;
+}
+
+.secondary-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.dropdown-menu li a {
+  color: inherit;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.dropdown-menu li::after {
+  content: ">";
+  font-weight: bold;
+  color: #d97706;
+  margin-left: 10px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 6. HERO SECTION
+|--------------------------------------------------------------------------
+*/
+
+.hero-sect-cont {
+  /* Using the uploaded image file name for context */
+  background-image: url("../images/imgi_53_Artboard5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 520px;
+  width: 100%;
+}
+
+.show-card {
+  background: rgba(255, 255, 255, 0.8);
+  max-width: 480px;
+  height: 270px;
+  padding: 30px;
+  margin: 0;
+  color: #424A52;
+  position: absolute;
+  /* NOTE: Fixed positioning like this is tricky for responsiveness. */
+  top: 310px;
+  left: 220px;
+}
+
+.show-card h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.show-card p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #6b6b6b;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 7. GUARANTY SECTION
+|--------------------------------------------------------------------------
+*/
+
+.guaranty-section {
+  background-color: #FFFFFF;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.guaranty-section h2 {
+  display: flex;
+  /* Width set in Layout section (75%) */
+  padding-bottom: 30px;
+  color: #424A52;
+}
+
+.guaranty-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* Width set in Layout section (75%) */
+}
+
+.guaranty-text p {
+  font-size: 17.5px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #424A52;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 8. SOLUTIONS CARDS SECTION
+|--------------------------------------------------------------------------
+*/
+
+.solutions-section {
+  background-color: #fff;
+  padding: 120px 0 30px 0;
+  margin-bottom: 80px;
+  font-family: "Poppins", sans-serif;
+}
+
+.solutions-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #424A52;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  /* Width set in Layout section (75%) */
+}
+
+.solutions-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Width set in Layout section (75%) */
+}
+
+.solution-card {
+  background: #fff;
+  /* Custom box shadow for a card effect */
+  box-shadow: 0 4px 8px rgba(215, 203, 203, 0.15), 0 -4px 8px rgba(184, 174, 174, 0.15), 4px 0 8px rgba(194, 180, 180, 0.15), -4px 0 8px rgba(202, 190, 190, 0.15);
+  padding: 30px 25px 40px 0px;
+  flex: 1 1 30%;
+  max-width: 260px;
+  height: 380px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #424a52;
+  transition: box-shadow 0.3s ease;
+}
+
+.solution-icon {
+  margin-bottom: 20px;
+}
+
+/* Invert icon color to match branding */
+.solution-icon img {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(2deg) brightness(119%) contrast(119%);
+}
+
+.solution-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #424A52;
+}
+
+.solution-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: #424A52;
+}
+
+.solution-card .btn-primary {
+  /* This overrides the background/padding of the base .btn-primary for a link style */
+  background-color: transparent;
+  color: #DF5A15;
+  padding: 0;
+  box-shadow: none;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 9. MEDIA / NEWS SECTION
+|--------------------------------------------------------------------------
+*/
+
+.media-section {
+  padding-bottom: 30px;
+}
+
+.media-cont {
+  /* Width set in Layout section (75%) */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.media-special {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.media-special .date {
+  grid-column: 1 / -1;
+}
+
+.media-special h4 {
+  grid-column: 1;
+  color: #424A52;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.media-special img {
+  grid-column: 2;
+  justify-self: end;
+  width: 100px;
+  height: auto;
+}
+
+.media-cont h4 {
+  color: #424A52;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 10px 0;
+  display: flex;
+}
+
+.media-cont h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.media-text {
+  color: #424A52;
+  padding-bottom: 30px;
+}
+
+.media-text:hover {
+  color: #cf4e0c;
+}
+
+.date {
+  font-size: 12px;
+  padding-top: 15px;
+  font-weight: 600;
+  color: #A2A5A8;
+}
+
+.btn-prime-container {
+  /* Width set in Layout section (75%) */
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 10. SMALL IMAGE SECTION
+|--------------------------------------------------------------------------
+*/
+
+.small-img-section {
+  padding-bottom: 100px;
+}
+
+.h4-ttext {
+  color: #424A52;
+  font-size: 1.3em;
+}
+
+.small-img-cont {
+  /* Width set in Layout section (75%) */
+  padding-top: 30px;
+}
+
+.small-picture {
+  display: flex;
+  padding-top: 30px;
+  gap: 20px;
+}
+
+.small-picture img {
+  background-color: white;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 18px 10px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 11. CONTACT NUMBERS
+|--------------------------------------------------------------------------
+*/
+
+.contact-numbers {
+  /* Width set in Layout section (75%) */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-family: inherit;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 32px;
+  white-space: nowrap;
+}
+
+.contact-row--top {
+  justify-content: space-between;
+}
+
+.contact-row--bottom {
+  justify-content: flex-start;
+  margin-top: 16px;
+  /* Specific gap for alignment */
+  gap: 113px;
+}
+
+.contact-row span {
+  color: #1a2a36;
+  font-weight: 700;
+  font-size: 16px;
+  display: inline-block;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 12. MAIN FOOTER (Desktop Links)
+|--------------------------------------------------------------------------
+*/
+
+.footer {
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  /* Width set in Layout section (75%) */
+  padding: 120px 0 80px 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #424A52;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #dd4f05;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 13. FOOTER LOGOS (Above Main Footer)
+|--------------------------------------------------------------------------
+*/
+
+.footer-logo-section {
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-logo-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.footer-logo-cont>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-img {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #E0E1E2;
+}
+
+.para-text {
+  padding-top: 10px;
+  text-align: center;
+  color: #424A52;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 14. SITE FOOTER (Copyright & Social Links)
+|--------------------------------------------------------------------------
+*/
+
+.site-footer {
+  background-color: #434A51;
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.site-footer .footer-left p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.site-footer .footer-center {
+  display: flex;
+  gap: 20px;
+}
+
+.site-footer .footer-center a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.site-footer .footer-center a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-footer .footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.site-footer .footer-right a {
+  color: #434A51;
+  background: #aaa;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.site-footer .footer-right a img {
+  /* Filter applied to white/light grey image to match background */
+  filter: invert(23%) sepia(9%) saturate(0%) hue-rotate(169deg) brightness(96%) contrast(90%);
+}
+
+.site-footer .floating-btn:hover {
+  background-color: #cf4e0c;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 15. RESPONSIVE MEDIA QUERIES
+|--------------------------------------------------------------------------
+*/
+
+/* --- Tablet/General Responsive Layout (Max-width 768px) --- */
+@media (max-width: 768px) {
+
+  .nav-container,
+  .secondary-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-menu,
+  .secondary-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* --- Medium Screens (Max-width 880px) --- */
+@media (max-width: 880px) {
+  .contact-row {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .contact-row--top {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .contact-row--bottom {
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+/* --- Small Desktop/Guaranty Section Layout (Max-width 1100px) --- */
+@media (max-width: 1100px) {
+  .guaranty-cont {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .footer {
+    padding: 50px 0px;
+  }
+}
+
+/* --- Small Desktop/Guaranty Section Layout (Max-width 1120px) --- */
+@media (max-width:1120px) {
+
+  /* Hides the row of footer logos */
+  .footer-logo-cont {
+    display: none;
+  }
+}
+
+/* --- Small Desktop/Guaranty Section Layout (Max-width 1200px) --- */
+@media (max-width: 1200px) {
+
+  /* Specific margin adjustment for guaranty section */
+  .guaranty-cont {
+    margin-left: 20px;
+    margin-right: 0;
+    /* Ensures container is still centered if needed, but pushing off left */
+  }
+}
+
+
+/* --- Mobile Layout Overrides (Max-width 800px) --- */
+@media (max-width: 800px) {
+
+  /* PRIMARY NAV MOBILE OVERRIDES */
+  .primary-nav {
+    background-color: white;
+    border-bottom: 1px solid #cf4e0c;
+  }
+
+  .secondary-nav {
+    display: none;
+  }
+
+  .nav-left {
+    display: none;
+  }
+
+  .nav-right {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 24px;
+    align-items: center;
+  }
+
+  .gtco-mobile-logo {
+    display: block;
+  }
+
+  .gt-logo-mobile {
+    width: 60px;
+    height: auto;
+  }
+
+  .search-icon {
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+    fill: #6b7280;
+    cursor: pointer;
+    transition: fill 0.3s;
+    flex-shrink: 0;
+  }
+
+  .search-icon:hover {
+    fill: #DD4F05;
+  }
+
+  /* LOGIN BUTTON MOBILE STYLING */
+  .login-link {
+    background-color: #DD4F05;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }
+
+  .login-link:hover {
+    background-color: #b83700;
+  }
+
+  .login-link .desktop-text {
+    display: none;
+  }
+
+  .login-link .mobile-text {
+    display: inline;
+  }
+
+  .contact-numbers {
+    display: none;
+  }
+
+  /* FOOTER MOBILE OVERRIDES */
+  .footer {
+    display: none;
+  }
+
+  .accordion {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    /* Show mobile accordion */
+  }
+}

@@ -1,0 +1,1046 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: acumin-pro, sans-serif;
+}
+
+/* Important Notice Banner */
+.notice-banner {
+  background-color: #f5f3f0;
+  padding: 16px 24px;
+}
+
+.notice-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.notice-title {
+  color: #d97706;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.notice-text {
+  color: #6b7280;
+  line-height: 28px;
+  font-size: 1.2em;
+}
+
+/* Primary Navigation */
+.primary-nav {
+  background-color: #DD4F05;
+  padding: 12px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d97706;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-item:hover {
+  color: #fed7aa;
+}
+
+.dropdown-arrow {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-icon,
+.lock-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  cursor: pointer;
+}
+
+.search-icon:hover,
+.lock-icon:hover {
+  fill: #fed7aa;
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-link:hover {
+  color: #fed7aa;
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+  background-color: #fafafa;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+}
+
+.secondary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondary-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.home-icon {
+  width: 20px;
+  height: 20px;
+  fill: #6b7280;
+}
+
+
+/* Home icon  */
+.home-link {
+  display: inline-flex;
+  /* keeps it tight around the SVG */
+  align-items: center;
+  text-decoration: none;
+}
+
+.home-link:hover .home-icon {
+  fill: #DD4F05;
+  /* hover effect */
+}
+
+
+.secondary-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.secondary-item {
+  color: #374151;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.secondary-item:hover {
+  color: #d97706;
+}
+
+/* GTCO Logo */
+.gtco-logo {
+  /* background-color: #d97706; */
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.gtco-title {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.gtco-subtitle {
+  color: white;
+  font-size: 10px;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+.gtco-country {
+  opacity: 0.8;
+}
+
+/* personal dropdown  */
+
+.secondary-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.secondary-item a {
+  color: #374151;
+  text-decoration: none;
+}
+
+
+.secondary-item:hover,
+.secondary-item.active {
+  color: #d97706;
+  border-bottom: 3px solid #d97706;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 320px;
+  padding: 10px 0;
+  z-index: 1000;
+  margin-top: 3px;
+}
+
+.secondary-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.dropdown-menu li a {
+  color: inherit;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.dropdown-menu li::after {
+  content: ">";
+  font-weight: bold;
+  color: #d97706;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+/* hero-section  */
+
+.hero-sect-cont {
+  background-image: url("../images/business_pbanner-07.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 502px;
+  width: 100%;
+}
+
+.show-card {
+  background: rgba(255, 255, 255, 0.8);
+  max-width: 450px;
+  height: 350px;
+  padding: 30px;
+  margin: 0;
+  color: #424A52;
+  position: absolute;
+  top: 310px;
+  left: 220px;
+}
+
+
+
+.show-card h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.show-card p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #6b6b6b;
+}
+
+.show-card .btn-primary {
+  background-color: #e6500d;
+  color: white;
+  padding: 14px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(230, 80, 13, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.show-card .btn-primary:hover {
+  background-color: #cf4e0c;
+}
+
+
+
+
+
+
+.cards-section {
+  background-color: #F7F8F8;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.cards-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+  gap: 40px;
+}
+
+.card {
+  width: 200px;
+  height: 190px;
+  color: #424A52;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1), 2px 0 4px rgba(0, 0, 0, 0.1), -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+  color: #424A52;
+}
+
+.card a:hover {
+  color: #e6500d;
+}
+
+
+
+
+
+
+.accounts-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  width: 75%;
+  margin: 60px auto;
+  padding-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.accounts-left h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2a36;
+  margin-bottom: 15px;
+}
+
+.accounts-left p {
+  color: #4f5d75;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #e85c0d;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #cf4e0c;
+}
+
+.accounts-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.account-card {
+  display: block;
+  padding: 18px 22px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  font-weight: 600;
+  color: #c24a0e;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* .account-card:hover {
+  background: #fdf3ee;
+  border-color: #e85c0d;
+} */
+
+.accounts-right img {
+  max-width: 100%;
+}
+
+
+
+
+
+.private-section {
+  background-color: #F7F8F8;
+}
+
+.private-cont-general {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.private-text {
+  font-size: 30px;
+  color: #424A52;
+  padding-bottom: 40px;
+}
+
+.private-para {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.2px;
+  color: #424A52;
+  padding-bottom: 40px;
+}
+
+.private-img {
+  width: 760px;
+  height: 350px;
+}
+
+/* New Solutions By Business Type Section */
+
+.solutions-section {
+  background-color: #fff;
+  padding: 120px 0 80px 0;
+  width: 75%;
+  margin: 0 auto 80px auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.solutions-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #424A52;
+  margin-bottom: 40px;
+}
+
+.solutions-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.solution-card {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(230, 80, 13, 0.4);
+  padding: 30px 25px 40px 25px;
+  flex: 1 1 30%;
+  max-width: 370px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #424a52;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.solution-icon {
+  margin-bottom: 20px;
+}
+
+.solution-icon img {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(2deg) brightness(119%) contrast(119%);
+}
+
+
+.solution-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #424A52;
+}
+
+.solution-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: #424A52;
+}
+
+.solution-card .btn-primary {
+  background-color: #e6500d;
+  color: white;
+  padding: 12px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(230, 80, 13, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* footer logo section  */
+
+
+.footer-logo-section {
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-logo-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.footer-logo-cont>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width:1120px) {
+  .footer-logo-cont {
+    display: none;
+  }
+}
+
+.footer-img {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #E0E1E2;
+}
+
+.para-text {
+  padding-top: 10px;
+  text-align: center;
+  color: #424A52;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+
+
+/* foter section  */
+
+
+.footer {
+  background: #fff;
+  padding: 50px 100px;
+  border-top: 1px solid #e5e5e5;
+  width: 75%;
+  margin: auto;
+  padding: 120px 0 80px 0;
+  /* justify-content: space-between; */
+}
+
+@media (max-width:1100px) {
+  .footer {
+    padding: 50px 0px;
+  }
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+/* Column Headings */
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #424A52;
+}
+
+/* Links */
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #dd4f05;
+  /* brand orange */
+}
+
+
+
+
+/* Accordion width reduction */
+.accordion {
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+}
+
+@media (max-width:800px) {
+  .accordion {
+    display: block;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+
+
+
+
+
+/* CONTACT NUMBERS - unique classes to avoid bootstrap conflicts */
+.contact-numbers {
+  width: 75%;
+  margin: 30px auto;
+  /* choose alignment for whole block */
+  text-align: left;
+  font-family: inherit;
+}
+
+/* common row behaviour */
+.contact-row {
+  display: flex;
+  flex-wrap: nowrap;
+  /* keep items on one line unless they overflow */
+  align-items: center;
+  gap: 32px;
+  /* space between numbers */
+  white-space: nowrap;
+  /* keep each phone number together */
+}
+
+/* top row: spread five numbers across the container */
+.contact-row--top {
+  justify-content: space-between;
+}
+
+/* bottom row: show the two numbers beginning under the left side;
+   adjust gap to place them roughly where you want */
+.contact-row--bottom {
+  justify-content: flex-start;
+  margin-top: 16px;
+  gap: 110px;
+  /* increase space between the two items to match your design */
+}
+
+/* number styling */
+.contact-row span {
+  color: #1a2a36;
+  font-weight: 700;
+  font-size: 16px;
+  display: inline-block;
+  /* better control than raw span */
+}
+
+/* small screens: stack numbers nicely */
+@media (max-width: 880px) {
+  .contact-row {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .contact-row--top {
+    justify-content: center;
+    /* centre on small screens */
+    gap: 24px;
+  }
+
+  .contact-row--bottom {
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+
+
+
+
+
+
+.site-footer {
+  background-color: #434A51;
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.site-footer .footer-left p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.site-footer .footer-center {
+  display: flex;
+  gap: 20px;
+}
+
+.site-footer .footer-center a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.site-footer .footer-center a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-footer .footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.site-footer .footer-right a {
+  color: #434A51;
+  background: #aaa;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.site-footer .footer-right a img {
+  filter: invert(23%) sepia(9%) saturate(0%) hue-rotate(169deg) brightness(96%) contrast(90%);
+}
+
+/* .site-footer .footer-right a:hover {
+  background: #e6500d;
+  color: #fff;
+} */
+
+
+.site-footer .floating-btn:hover {
+  background-color: #cf4e0c;
+}
+
+/* --- START OF NEW MEDIA QUERIES FOR CONTENT RESPONSIVENESS --- */
+
+/* Tablet and Smaller Desktop Adjustments (Max Width: 1024px) */
+@media (max-width: 1024px) {
+
+  /* Main Content Containers: Increase width to utilize space */
+  .cards-cont,
+  .accounts-section,
+  .private-cont-general,
+  .solutions-section,
+  .contact-numbers {
+    width: 90%;
+  }
+
+  /* Hero Card: Adjust absolute positioning for smaller screens */
+  .show-card {
+    max-width: 380px;
+    left: 8%;
+    /* Move closer to the edge/center */
+    top: 280px;
+    padding: 20px;
+  }
+
+  .show-card h2 {
+    font-size: 38px;
+  }
+
+  /* Accounts Section: Change from 3 columns to 2 columns */
+  .accounts-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  /* Private Section: Stack elements vertically */
+  .private-cont-general {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .private-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile and Small Tablet Adjustments (Max Width: 768px) */
+@media (max-width: 768px) {
+
+  /* Hide secondary navigation on small screens */
+  .secondary-nav {
+    display: none;
+  }
+
+  /* Navigation (Existing Rules Enhanced) */
+  .nav-container,
+  .secondary-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px;
+    /* Adjusted padding for narrower screens */
+  }
+
+  .nav-menu,
+  .secondary-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .secondary-item {
+    padding: 10px 10px;
+    /* Reduced padding on nav items */
+  }
+
+  .dropdown-menu {
+    min-width: 100%;
+    /* Dropdown fills container width on mobile */
+  }
+
+  /* Hero Section: Remove absolute positioning for card and make it fluid */
+  .hero-sect-cont {
+    height: auto;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Push card to the bottom */
+  }
+
+  .show-card {
+    position: static;
+    /* Remove absolute positioning */
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .show-card h2 {
+    font-size: 30px;
+  }
+
+  .show-card p {
+    font-size: 14px;
+  }
+
+  /* Cards Section: Two cards per row */
+  .cards-cont {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    width: calc(50% - 10px);
+    /* Two cards per row with gap */
+    height: 160px;
+    font-size: 14px;
+  }
+
+  /* Accounts Section: Change to a single column grid */
+  .accounts-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Move the image section above the accounts list on mobile */
+  .accounts-right {
+    order: -1;
+  }
+
+  /* Solutions Section: Single column stack */
+  .solutions-heading {
+    margin-bottom: 25px;
+  }
+
+  .solution-card {
+    flex: 1 1 100%;
+    /* Full width stack */
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  /* Site Footer: Stack elements vertically */
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .site-footer .footer-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .site-footer .footer-left,
+  .site-footer .footer-center,
+  .site-footer .footer-right {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile Adjustments (Max Width: 480px) */
+@media (max-width: 480px) {
+
+  /* Notice Banner text size reduction */
+  .notice-title,
+  .notice-text {
+    font-size: 1em;
+  }
+
+  /* Hero Card Text Size */
+  .show-card h2 {
+    font-size: 26px;
+  }
+
+  /* Cards Section: Stack all cards vertically */
+  .cards-cont {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+    /* Full width for stacking */
+    height: 120px;
+    font-size: 1em;
+  }
+
+  /* Accounts Section Button: Full width */
+  .accounts-left .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Private Section Text Size */
+  .private-text {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+
+  .private-para {
+    font-size: 16px;
+  }
+
+  /* Contact Numbers: Ensure center alignment */
+  .contact-row--top,
+  .contact-row--bottom {
+    justify-content: center;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,1243 @@
+/* -------------------------------------------------------------------------- */
+/* 1. BASE STYLES & RESET                                                     */
+/* -------------------------------------------------------------------------- */
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none !important;
+}
+
+/* Base Typography */
+body {
+  font-family: acumin-pro, sans-serif;
+}
+
+/* Global Utility Classes */
+.notice-container,
+.nav-container,
+.secondary-container,
+.accounts-section,
+.private-cont-general,
+.product-card-section,
+.footer,
+.contact-numbers {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Override margin auto for .footer and .contact-numbers to respect the 75% width set later */
+.footer,
+.contact-numbers,
+.cards-cont,
+.accounts-section,
+.private-cont-general,
+.product-card-section {
+  max-width: none;
+  /* Resetting max-width to allow inner section width to control */
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Primary Action Button */
+.btn-primary {
+  background-color: #e6500d;
+  color: white;
+  padding: 14px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(230, 80, 13, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #cf4e0c;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 2. HEADER & NAVIGATION COMPONENTS                                          */
+/* -------------------------------------------------------------------------- */
+
+/* Important Notice Banner */
+.notice-banner {
+  background-color: #f5f3f0;
+  padding: 16px 24px;
+}
+
+.notice-title {
+  color: #d97706;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.notice-text {
+  color: #6b7280;
+  line-height: 28px;
+  font-size: 1.2em;
+}
+
+/* ----------------------------------
+ * 3. Primary Navigation (Orange Bar)
+ * ---------------------------------- */
+.primary-nav {
+  background-color: #DD4F05;
+  padding: 12px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d97706;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-item:hover {
+  color: #fed7aa;
+}
+
+.dropdown-arrow {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-icon,
+.lock-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  cursor: pointer;
+}
+
+.lock-icon-desktop {
+  width: 16px;
+  height: 16px;
+}
+
+.search-icon:hover,
+.lock-icon:hover {
+  fill: #fed7aa;
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-link:hover {
+  color: #fed7aa;
+}
+
+/* GTCO Logo (in Secondary Nav) */
+.gtco-logo {
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.gtco-title {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.gtco-subtitle {
+  color: white;
+  font-size: 10px;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+.gtco-country {
+  opacity: 0.8;
+}
+
+/* Responsive Adjustments for Primary Navigation */
+@media (max-width: 800px) {
+
+  /* Mobile Primary Nav */
+  .primary-nav {
+    background-color: white;
+    border-bottom: 1px solid #cf4e0c;
+  }
+
+  .gt-logo {
+    display: none;
+  }
+
+  .nav-left {
+    display: none;
+  }
+
+  .nav-right {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .gtco-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gt-logo-mobile {
+    width: 60px;
+    height: auto;
+  }
+
+  .search-icon {
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+    fill: #6b7280;
+    cursor: pointer;
+    transition: fill 0.3s;
+    flex-shrink: 0;
+  }
+
+  .search-icon:hover {
+    fill: #DD4F05;
+  }
+
+  .login-link {
+    background-color: #DD4F05;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-link:hover {
+    background-color: #b83700;
+    color: white;
+  }
+
+  .lock-icon-desktop {
+    display: none;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: inline;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* ----------------------------------
+ * 4. Secondary Navigation & Dropdown
+ * ---------------------------------- */
+.secondary-nav {
+  background-color: #fafafa;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+}
+
+.secondary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondary-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.home-icon {
+  width: 20px;
+  height: 20px;
+  fill: #6b7280;
+}
+
+.home-link {
+  display: inline-flex;
+  /* keeps it tight around the SVG */
+  align-items: center;
+  text-decoration: none;
+}
+
+.home-link:hover .home-icon {
+  fill: #DD4F05;
+  /* hover effect */
+}
+
+.secondary-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.secondary-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.secondary-item a {
+  color: #374151;
+  text-decoration: none;
+}
+
+.secondary-item:hover,
+.secondary-item.active {
+  color: #d97706;
+  border-bottom: 3px solid #d97706;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 320px;
+  padding: 10px 0;
+  z-index: 1000;
+  margin-top: 3px;
+}
+
+.secondary-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.dropdown-menu li a {
+  color: inherit;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.dropdown-menu li::after {
+  content: ">";
+  font-weight: bold;
+  color: #d97706;
+  margin-left: 10px;
+}
+
+/* Responsive Adjustments for Secondary Navigation */
+@media (max-width: 800px) {
+  .secondary-nav {
+    display: none;
+    /* Secondary Nav is hidden completely on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .secondary-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .secondary-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 3. MAIN CONTENT SECTIONS                                                   */
+/* -------------------------------------------------------------------------- */
+
+/* Hero Section (Banner with Text Card) */
+.hero-sect-cont {
+  background-image: url("../images/imgi_52_personal-loans_1400x452 (1).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 502px;
+  width: 100%;
+  position: relative;
+}
+
+.show-card {
+  background: rgba(255, 255, 255, 0.8);
+  max-width: 450px;
+  height: 300px;
+  padding: 30px;
+  margin: 0;
+  color: #424A52;
+  position: absolute;
+  top: 80px;
+  left: 200px;
+}
+
+.show-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.show-card p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #6b6b6b;
+}
+
+/* Feature/Interest Cards Section */
+.interest-text {
+  width: 75%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #424A52;
+  margin: auto;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.cards-section {
+  background-color: #F7F8F8;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.cards-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.card {
+  width: 200px;
+  height: 190px;
+  color: #424A52;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1), 2px 0 4px rgba(0, 0, 0, 0.1), -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+  color: #424A52;
+}
+
+.card a:hover {
+  color: #e6500d;
+}
+
+/* Accounts Section (Grid) */
+.accounts-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  margin: 60px auto;
+  padding-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.accounts-left h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2a36;
+  margin-bottom: 15px;
+}
+
+.accounts-left p {
+  color: #4f5d75;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.accounts-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.account-card {
+  display: block;
+  padding: 18px 22px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  font-weight: 600;
+  color: #c24a0e;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.accounts-right img {
+  max-width: 100%;
+}
+
+
+/* Private Banking Section */
+.private-section {
+  background-color: #F7F8F8;
+}
+
+.private-cont-general {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.private-text {
+  font-size: 30px;
+  color: #424A52;
+  padding-bottom: 40px;
+}
+
+.private-para {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.2px;
+  color: #424A52;
+  padding-bottom: 40px;
+}
+
+.private-img {
+  width: 800px;
+  height: 350px;
+}
+
+
+/* Product Cards Grid */
+.product-card-section {
+  margin: 40px auto;
+  padding-top: 70px;
+}
+
+.product-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #424A52;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.pro-card1 {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1), 2px 0 4px rgba(0, 0, 0, 0.1), -2px 0 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pro-card1 img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  /* Invert filter is used to change color of a grayscale/black icon */
+  filter: invert(34%) sepia(82%) saturate(749%) hue-rotate(3deg) brightness(95%) contrast(92%);
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pro-card1 h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #424A52;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pro-card1 a {
+  color: #e6500d;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 12px 0;
+  display: block;
+}
+
+.pro-card1 a:hover {
+  text-decoration: none;
+}
+
+/* Specific styling for the button inside the product card */
+.pro-card1 .btn-primary {
+  margin-top: auto;
+  padding: 12px 12px;
+  text-align: center;
+}
+
+
+/* Carousel (Bootstrap Overrides) */
+/* Assuming this uses a Bootstrap Carousel framework */
+#twoCardCarousel {
+  width: 650px;
+  margin: 20px 150px;
+}
+
+.custom-card {
+  width: 300px;
+  height: 300px;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.custom-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.custom-card .card-body {
+  padding: 15px;
+  text-align: left;
+}
+
+/* Carousel Controls Styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#twoCardCarousel .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23D94D05' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+#twoCardCarousel .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23D94D05' viewBox='0 0 16 16'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+
+/* ----------------------------------
+ * 9. Footer - Logo Quick Links
+ * ---------------------------------- */
+.footer-logo-section {
+  padding-top: 40px;
+}
+
+.footer-logo-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.footer-logo-cont>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-img {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #E0E1E2;
+}
+
+.para-text {
+  padding-top: 10px;
+  text-align: center;
+  color: #424A52;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+/* Responsive Adjustments for Footer - Logo Quick Links */
+@media (max-width: 1120px) {
+  .footer-logo-cont {
+    display: none;
+  }
+}
+
+/* ----------------------------------
+ * 10. Footer - Main Links & Accordion
+ * ---------------------------------- */
+.footer {
+  background: #fff;
+  padding: 50px 100px;
+  border-top: 1px solid #e5e5e5;
+  width: 75%;
+  padding: 120px 0 80px 0;
+  margin: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+/* Column Headings */
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #424A52;
+}
+
+/* Links */
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #dd4f05;
+  /* brand orange */
+}
+
+/* Accordion (Mobile Footer) */
+.accordion {
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+  /* Desktop default is hidden */
+}
+
+.accordion .footer-column ul {
+  padding-left: 30px;
+  background-color: #F7F8F8;
+}
+
+/* Remove blue border and background color from accordion buttons */
+.accordion-button {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: inherit;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: inherit;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Responsive Adjustments for Footer - Main Links & Accordion */
+@media (max-width: 1100px) {
+  .footer {
+    padding: 50px 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .accordion {
+    display: block;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+/* ----------------------------------
+ * 11. Footer - Contact Numbers
+ * ---------------------------------- */
+.contact-numbers {
+  width: 75%;
+  margin: 30px auto;
+  text-align: left;
+  font-family: inherit;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  white-space: nowrap;
+}
+
+.contact-row--top {
+  justify-content: space-between;
+}
+
+.contact-row--bottom {
+  justify-content: flex-start;
+  margin-top: 16px;
+  gap: 113px;
+}
+
+.contact-row span {
+  color: #1a2a36;
+  font-weight: 700;
+  font-size: 16px;
+  display: inline-block;
+}
+
+/* Responsive Adjustments for Footer - Contact Numbers */
+@media (max-width: 880px) {
+  .contact-row {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .contact-row--top {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .contact-row--bottom {
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-numbers {
+    display: none;
+  }
+}
+
+/* ----------------------------------
+ * 12. Footer - Site Bottom Bar & Social Links
+ * ---------------------------------- */
+.site-footer {
+  background-color: #434A51;
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.site-footer .footer-left p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.site-footer .footer-center {
+  display: flex;
+  gap: 20px;
+}
+
+.site-footer .footer-center a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.site-footer .footer-center a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-footer .footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.site-footer .footer-right a {
+  color: #434A51;
+  background: #aaa;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.site-footer .footer-right a img {
+  filter: invert(23%) sepia(9%) saturate(0%) hue-rotate(169deg) brightness(96%) contrast(90%);
+}
+
+.site-footer .floating-btn:hover {
+  background-color: #cf4e0c;
+}
+
+/* ADDED: Improved small screen handling for Site Bottom Bar */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 25px 20px;
+    /* Reduced padding for mobile */
+    flex-direction: column;
+    /* Stack the groups (left, center, right) */
+    gap: 20px;
+  }
+
+  .site-footer .footer-left p {
+    text-align: center;
+  }
+
+  .site-footer .footer-center {
+    flex-direction: column;
+    /* Stack the privacy links vertically */
+    gap: 10px;
+    text-align: center;
+  }
+
+  .site-footer .footer-right {
+    justify-content: center;
+    /* Center social icons */
+  }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 13. COMPREHENSIVE RESPONSIVE LAYOUT                                       */
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Tablet and Smaller Desktop Adjustments (Max Width 1100px) --- */
+@media (max-width: 1100px) {
+
+  /* Global Containers: Increase width from 75% for better screen utilization */
+  .footer,
+  .contact-numbers,
+  .cards-cont,
+  .accounts-section,
+  .private-cont-general,
+  .product-card-section {
+    width: 90%;
+  }
+
+  /* Hero Card Position Adjustment */
+  .show-card {
+    /* Move card closer to the center/edge */
+    left: 100px;
+    max-width: 400px;
+  }
+
+  /* Footer: Already partially handled by user's 1100px rule */
+
+  /* Product Cards: Switch from 3 columns to 2 columns */
+  .product-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* --- Mid-Tablet Adjustments (Max Width 992px) --- */
+@media (max-width: 992px) {
+
+  /* Primary Navigation: Reduce gaps and text size */
+  .nav-left {
+    gap: 15px;
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-item,
+  .login-link {
+    font-size: 13px;
+  }
+
+  /* Secondary Navigation: Allow menu to wrap or stack slightly */
+  .secondary-menu {
+    flex-wrap: wrap;
+    gap: 15px 25px;
+  }
+
+  /* Hero Card Position Adjustment */
+  .hero-sect-cont {
+    background-position: 60% center;
+    /* Adjust image focus */
+  }
+
+  .show-card {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the card */
+    max-width: 90%;
+    padding: 25px;
+  }
+
+  /* Accounts Section: Switch from 3 columns to 2 columns (left side and combined right) */
+  .accounts-section {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .accounts-right {
+    /* Show image block on smaller tablets */
+  }
+
+  .accounts-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Private Banking Section: Stack content vertically */
+  .private-cont-general {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .private-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer: Ensure 5-column grid reduces to 3 columns before accordion breakpoint */
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 10px;
+  }
+}
+
+
+/* --- Mobile Adjustments (Max Width 600px) --- */
+@media (max-width: 600px) {
+
+  /* Global Containers: Full width on mobile */
+  .notice-container,
+  .nav-container,
+  .secondary-container,
+  .accounts-section,
+  .private-cont-general,
+  .product-card-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer,
+  .contact-numbers,
+  .cards-cont,
+  .accounts-section,
+  .private-cont-general,
+  .product-card-section {
+    width: 100%;
+    /* Max out width */
+  }
+
+  /* Primary Navigation: Stack vertically and hide menu (assuming hamburger would be implemented) */
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .nav-menu {
+    display: none;
+    /* Menu likely hidden behind a toggle button on small screens */
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  /* Secondary Navigation: Hide full menu for space */
+  .secondary-left {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .secondary-menu {
+    display: none;
+    /* Hide secondary menu on mobile */
+  }
+
+  /* Hero Section */
+  .hero-sect-cont {
+    height: 350px;
+    /* Shorter height on mobile */
+    background-position: center center;
+  }
+
+  .show-card {
+    position: static;
+    /* Remove absolute positioning */
+    transform: none;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .show-card h2 {
+    font-size: 22px;
+  }
+
+  /* Feature Cards */
+  .cards-cont {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+  }
+
+  /* Accounts Section: Single column stack */
+  .accounts-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /* Product Cards: Single column stack */
+  .product-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Carousel: Reduce width and margin */
+  #twoCardCarousel {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .custom-card {
+    width: 100%;
+  }
+
+  /* Footer: Accordion is already enabled at 800px, but padding is tightened */
+  .accordion .footer-column ul {
+    padding-left: 15px;
+  }
+}
